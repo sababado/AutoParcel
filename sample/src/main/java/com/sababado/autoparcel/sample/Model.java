@@ -33,6 +33,8 @@ public class Model implements Parcelable {
     WrapperModel wrapperModel;
     @ParcelMe
     PointF pointF;
+    @ParcelMe
+    ModelArrays modelArrays;
 
     public Model() {
     }
@@ -49,6 +51,7 @@ public class Model implements Parcelable {
         string = "Hello World!";
         wrapperModel = new WrapperModel(f);
         pointF = new PointF(23,24);
+        modelArrays = new ModelArrays(f);
     }
 
     // String
@@ -80,7 +83,7 @@ public class Model implements Parcelable {
 
     @Override
     public String toString() {
-        return "ModelTest{" +
+        return "Model{" +
                 "flag=" + flag +
                 ", myByte=" + myByte +
                 ", myChar=" + myChar +
@@ -91,8 +94,9 @@ public class Model implements Parcelable {
                 ", myDouble=" + myDouble +
                 ", nullString='" + nullString + '\'' +
                 ", string='" + string + '\'' +
-                ", modelWrapperTest=" + wrapperModel +
+                ", wrapperModel=" + wrapperModel +
                 ", pointF=" + pointF +
+                ", modelArrays=" + modelArrays +
                 '}';
     }
 }
